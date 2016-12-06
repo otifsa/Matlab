@@ -1,0 +1,10 @@
+clear;
+clc;
+ima=imread('cameraman.tif');
+imad=double(ima);
+imam=mul(imad,1.2);
+imamu=uint8(imam);
+subplot(1,2,1);
+imshow(imamu);
+subplot(1,2,2);
+imshow(ima);

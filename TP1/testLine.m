@@ -1,0 +1,12 @@
+clear;
+clc;
+ima=imread('cameraman.tif');
+imad=double(ima);
+imaL=lin_histo(imad);
+imaLu=uint8(imaL);
+subplot(2,2,1);
+imshow(imaLu);
+subplot(2,2,2);
+imshow(ima);
+subplot(2,2,3);
+histeq(ima);

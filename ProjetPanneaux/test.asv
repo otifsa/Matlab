@@ -1,0 +1,7 @@
+I = imread('BYes_Sourdun_ImageThermique_27p (1).jpg');
+I1=rgb2gray(I);
+regions = detectMSERFeatures(I1);
+subplot()
+imshow(I1);hold on;
+plot(regions(22));
+imshow(I1);

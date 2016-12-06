@@ -1,0 +1,16 @@
+clear
+clc
+noise
+ima=imread('cameraman.tif');
+imab=imread('cameraman_bruit.tif');
+imad=double(ima);
+im1=median1(imad,3,3);
+im2=median1(imad,5,5);
+im3=median1(imad,7,7);
+im4=median1(imad,9,9);
+subplot(2,3,1);imshow(ima);title('original');
+subplot(2,3,2);imshow(imab);title('bruit');
+subplot(2,3,3);imshow(uint8(im1));title('3*3');
+subplot(2,3,4);imshow(uint8(im2));title('5*5');
+subplot(2,3,5);imshow(uint8(im3));title('7*7');
+subplot(2,3,6);imshow(uint8(im4));title('9*9');

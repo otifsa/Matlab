@@ -1,0 +1,10 @@
+clear
+clc
+noise
+ima=imread('cameraman_bruit.tif');
+imad=double(ima);
+H=[-1,-1,-1;-1,8,-1;-1,-1,-1];
+im=filtre_Pbas(imad,H);
+imr=uint8(im);
+subplot(1,2,1);imshow(ima);title('avant');
+subplot(1,2,2);imshow(imr);title('apres');

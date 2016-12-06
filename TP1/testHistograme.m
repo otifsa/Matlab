@@ -1,0 +1,9 @@
+clear;
+clc;
+ima=imread('cameraman.tif');
+imad=double(ima);
+his=histogramme(imad);
+subplot(1,2,1);
+plot(his);
+subplot(1,2,2);
+plot(imhist(ima));
